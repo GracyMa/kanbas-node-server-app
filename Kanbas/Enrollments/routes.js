@@ -18,6 +18,6 @@ export default function EnrollmentRoutes(app) {
     app.get("/api/enrollments/:id", (req, res) => {
 
         const { id } = req.params;
-        res.json(enrollmentDao.fetchEnrollments(id));
+        res.json(enrollmentDao.findCoursesForUser(id));
     });
 }
